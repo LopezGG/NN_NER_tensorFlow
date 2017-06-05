@@ -70,9 +70,9 @@ FLAGS = tf.flags.FLAGS
 FLAGS._parse_flags()
 Flags_Dict= utils.print_FLAGS(FLAGS,logger)
 
-train_path = Flags_Dict.train_path
-test_path = Flags_Dict.test_path
-dev_path = Flags_Dict.dev_path
+train_path = FLAGS.train_path
+test_path = FLAGS.test_path
+dev_path = FLAGS.dev_path
 
 word_column = FLAGS.word_col
 label_column = FLAGS.label_col

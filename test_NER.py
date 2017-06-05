@@ -52,8 +52,10 @@ with tf.Session() as sess:
 	
 	# Access saved Variables directly. Get a list of variables by using #to get all keys
 	#All_varaibles = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)
-	#Below code versifies that the model was loaded correctly
+	#Below code verifies that the model was loaded correctly
 	#print(sess.run('output/b_out:0'))
+	# to save any variable do :
+	#Embedding = sess.run(graph.get_tensor_by_name('word_embedding/W_word:0'))
 	logger.info("Running Test ....")
 	af.test_step_report(logger,sess,
 		PadZeroBegin=FlagsDict['PadZeroBegin'],max_length = FlagsDict['sequence_length'],

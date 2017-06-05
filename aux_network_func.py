@@ -152,11 +152,11 @@ def test_step(logger,session,BiLSTM,PadZeroBegin,max_length,test_path,
     fname_seqLength = "act_seq_len_"+str(step)+".pkl" 
     fname_embedded_char = "embedded_char_"+str(step)+".pkl" 
     fname_embedded_words = "embedded_words_"+str(step)+".pkl" 
-    pickle.dump(input_x_test,open(os.path.join(checkpoint_dir_test, fname_data),'wb'))
-    pickle.dump(char_pool_flat,open(os.path.join(checkpoint_dir_test, fname_conv_out),'wb'))
-    pickle.dump(test_seq_length,open(os.path.join(checkpoint_dir_test, fname_seqLength),'wb'))
-    pickle.dump(embedded_char,open(os.path.join(checkpoint_dir_test, fname_embedded_char),'wb'))
-    pickle.dump(embedded_words,open(os.path.join(checkpoint_dir_test, fname_embedded_words),'wb'))
+    dill.dump(input_x_test,open(os.path.join(checkpoint_dir_test, fname_data),'wb'))
+    dill.dump(char_pool_flat,open(os.path.join(checkpoint_dir_test, fname_conv_out),'wb'))
+    dill.dump(test_seq_length,open(os.path.join(checkpoint_dir_test, fname_seqLength),'wb'))
+    dill.dump(embedded_char,open(os.path.join(checkpoint_dir_test, fname_embedded_char),'wb'))
+    dill.dump(embedded_words,open(os.path.join(checkpoint_dir_test, fname_embedded_words),'wb'))
     print("Saved test data checkpoint to {}\n".format(checkpoint_dir_test))
     return accuracy,accuracy_low_classes
 
@@ -296,7 +296,7 @@ def viterbi_decode(logits,transition_params,seq_length,x_batch,word_alphabet,lab
             outfile.write(str(x_word) + "\t"+str(pred_label)+"\n")
         outfile.write("\n")   
 
-      return
+  return
 
 def test_step_report(logger,session,PadZeroBegin,max_length,test_path,
     dropout_keep_prob,step,out_dir,char_alphabet,label_alphabet,word_alphabet,

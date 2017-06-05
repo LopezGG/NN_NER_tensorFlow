@@ -70,6 +70,7 @@ class textBiLSTM(object):
             self.word_char_features = tf.concat([self.embedded_words, self.char_pool_flat], axis=2) #we mean that the feature with index 2 i/e num_filters is variable 
             #print("self.word_char_features.get_shape(): ",self.word_char_features.get_shape())
             self.word_char_features_dropout =tf.nn.dropout(self.word_char_features, self.dropout_keep_prob,name="word_char_features_dropout")
+            
         
         with tf.name_scope("biLSTM"):
             # forward LSTM cell
