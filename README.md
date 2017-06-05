@@ -18,7 +18,8 @@ The code logs a lot of things. Feel free to
 comment those parts especially "predictAccuracyAndWrite" function
 
 The prediction can be run as 
-"python test_NER.py --PathToConfig /data/gilopez/Tf_LSTM_CRF/runs/1494895894/ --modelName model-41000"
+
+"python test_NER.py --PathToConfig Train_Results/ --modelName model-41000"
 
 Sample input and predictions for the test run is provided in results folder. Update the path based on the flags in the code
 Sample prediction is Sample_Data/test_Predictions_41000.txt
