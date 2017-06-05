@@ -22,3 +22,8 @@ The prediction can be run as
 
 Sample input and predictions for the test run is provided in results folder. Update the path based on the flags in the code
 Sample prediction is Sample_Data/test_Predictions_41000.txt
+
+The Evaluation code to calculate Precision and recall per category is in Eval.py. 
+
+in the Eval Change the prediction file name to the one from your test step. the precision and recall were calculated as described 
+Tjong Kim Sang, Erik. F. 2002. Introduction to the CoNLL-2003 Shared Task: Language Independent Named Entity Recognition. In Proc. Conference on Natural Language Learning
