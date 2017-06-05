@@ -19,7 +19,7 @@ comment those parts especially "predictAccuracyAndWrite" function
 
 The prediction can be run as 
 
-"python test_NER.py --PathToConfig Train_Results/ --modelName model-41000"
+"python test_NER.py --PathToConfig Train_Results/ --modelName model-41000 --TestFilePath Sample_Data/eng.testb.iobes.act_part"
 
 Sample input and predictions for the test run is provided in results folder. Update the path based on the flags in the code
 Sample prediction is Sample_Data/test_Predictions_41000.txt
