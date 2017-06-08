@@ -9,6 +9,9 @@ This works on
 - Python 3
 - uses glove.6B.100d.gz from https://nlp.stanford.edu/projects/glove/
 
+# Sample Output:
+You may look at the sample output of the final model in the file Sample_Data/test_Predictions_41000.txt
+
 # Training
 The Training can be run with
 
