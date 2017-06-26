@@ -76,9 +76,9 @@ def PrecisionRecall (y_label,pred_label):
     return metricValue
     
 print("PRECISION:")
-Precision = PrecisionRecall (y_label,pred_label)
+Precision = PrecisionRecall (pred_label,y_label)
 print ("RECALL")
-Recall = PrecisionRecall (pred_label,y_label)
+Recall = PrecisionRecall (y_label,pred_label)
 
 #F1 calculation:
 def F1_calc(Precision,Recall,beta = 1.0):
